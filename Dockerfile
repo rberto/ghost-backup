@@ -1,10 +1,10 @@
-FROM debian:stretch
+FROM debian:bookworm
 
 MAINTAINER Tim Bennett
 
 RUN \
   apt-get update && \
-  apt-get install -y mysql-client cron sqlite3 curl jq netcat
+  apt-get install -y mariadb-client cron sqlite3 curl jq netcat-traditional
 
 # -----------------------
 # Default configuration
