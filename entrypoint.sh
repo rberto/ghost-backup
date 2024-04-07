@@ -10,7 +10,7 @@ if [ "$AUTOMATED_BACKUPS" == "true" ]; then
     echo "Automated backups are on...installing crontab..."
     printenv | sed 's/^\(.*\)\=\(.*\)$/export \1\="\2"/g' > $ENV_FILE
     chmod +x $ENV_FILE
-    (echo "$BACKUP_TIME root . $ENV_FILE; /bin/backup"; echo "")  > $CRON_TAB
+    (echo "$BACKUP_TIME root . $ENV_FILE; /bin/backup $BACKUP_CMD_ARGS"; echo "")  > $CRON_TAB
 
     cat $CRON_TAB
 fi

@@ -51,6 +51,8 @@ ENV GHOST_SERVICE_NAME="ghost"
 # Service port for ghost connections (if applicable)
 ENV GHOST_SERVICE_PORT="2368"
 
+ENV BACKUP_CMD_ARGS ""
+
 # -----------------------
 
 RUN mkdir $BACKUP_LOCATION

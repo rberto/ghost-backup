@@ -176,6 +176,7 @@ ghost-backup has a number of options which can be configured as you need.
 | BACKUP_TIME           | 0 3 * * *   | A [cron expression] controlling the backup schedule.|
 | BACKUP_LOCATION       | /backups    | Where the backups are written to|
 | BACKUPS_RETAIN_LIMIT  | 30            | How many backups to keep. Oldest are removed first|
+| BACKUP_CMD_ARGS       | ""            | backup.sh command line argument added to the cron job |
 | LOG_LOCATION          | /var/log/ghost-backup.log | Location of the log file |
 | AUTOMATED_BACKUPS     | true             | Whether scheduled backups are on |
 | GHOST_LOCATION		| /var/lib/ghost/content | Location of ghost content and db files |
